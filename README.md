@@ -3,7 +3,7 @@
 Simply Implement Zee Young's [animation] (https://dribbble.com/shots/2067564-Replace?list=searches&offset=0) ,the effect is not good enough,still needs more work.
 
 
-Android Implement Can see [race604's version](https://github.com/race604/FlyRefresh）
+Android Implement Can see [race604's version](https://github.com/race604/FlyRefresh)
 
 Web Implement Can see [suez's version](http://codepen.io/suez/pen/oXLroX)
 
