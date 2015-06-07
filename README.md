@@ -12,14 +12,10 @@ Special Thanks to my teacher [alienjun](https://github.com/alienjun),we discuss 
 
 I'm designer,my code skill is not well.What I can do is just do some fake prototype(without data).Welcome for suggest.
 
+![Prototype](https://github.com/MartinRGB/Replace-iOS/blob/master/Asset/Parallax-QC.gif?raw=true)
+
+this is Origami Prototye 
 
 ![Effect](https://github.com/MartinRGB/Replace-iOS/blob/master/1.gif?raw=true)
 
 this is what I implement in Xcode 
-
-
-
-
-![Prototype](https://github.com/MartinRGB/Replace-iOS/blob/master/Asset/Parallax-QC.gif?raw=true)
-
-this is Origami Prototye 
