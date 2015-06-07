@@ -14,10 +14,12 @@ I'm designer,my code skill is not well.What I can do is just do some fake protot
 
 
 ![Effect](https://github.com/MartinRGB/Replace-iOS/blob/master/1.gif?raw=true)
+
 this is what I implement in Xcode 
 
 
 
 
 ![Prototype](https://github.com/MartinRGB/Replace-iOS/blob/master/Asset/Parallax-QC.gif?raw=true)
+
 this is Origami Prototye 
