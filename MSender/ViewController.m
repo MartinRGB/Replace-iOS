@@ -51,6 +51,7 @@
 
 @property (nonatomic) CGFloat startValue;
 @property (nonatomic) CGFloat popAnimationProgress;
+@property (nonatomic) CGFloat treeWaveProgress;
 
 @end
 
@@ -65,6 +66,8 @@
 
     //Add Tree & Filter
     [self TreeImagenFilter];
+    
+    [self addObserver:self forKeyPath:@"treeWaveProgress" options:NSKeyValueObservingOptionNew context:nil];
    
 }
 
@@ -93,7 +96,7 @@
         [self Paperplane];
         [self ListPOP];
         
-      
+        [self performSelector:@selector(setTreeWave) withObject:nil afterDelay:1.2];
         
         }
 }
@@ -201,8 +204,64 @@ static inline CGFloat POPTransition(CGFloat progress, CGFloat startValue, CGFloa
         [self.t5v.filter setValue:@(inputAngle2) forKey:kCIInputAngleKey];
         [self.t5v setNeedsDisplay];
     }
-    
+}
 
+//Wave the trees when the plan fly across them:)
+- (void)setTreeWave{
+    
+    _treeWaveProgress = -0.33;
+    POPSpringAnimation *animation = [self pop_animationForKey:@"treeWaveAnimation"];
+    
+    if (!animation) {
+        animation = [POPSpringAnimation animation];
+        animation.springBounciness = 30;
+        animation.springSpeed = 5;
+        animation.completionBlock = ^(POPAnimation *anim, BOOL finished){
+            
+            if (finished) {
+                
+                [self.scview setContentOffset:CGPointMake(0, 0)];
+                [self pop_removeAnimationForKey:@"treeWaveAnimation"];
+            }
+        };
+        animation.property = [POPAnimatableProperty propertyWithName:@"treeWaveAnimation" initializer:^(POPMutableAnimatableProperty *prop) {
+            prop.readBlock = ^(ViewController *obj, CGFloat values[]) {
+                values[0] = obj.treeWaveProgress;
+            };
+            prop.writeBlock = ^(ViewController *obj, const CGFloat values[]) {
+                obj.treeWaveProgress = values[0];
+            };
+            prop.threshold = 0.001;
+        }];
+        
+        [self pop_addAnimation:animation forKey:@"popAnimation"];
+    }
+    animation.toValue =@(0.01);
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if ([keyPath isEqualToString:@"treeWaveProgress"]) {   //Observe treeWaveProgress so that we can move the tree smoothly
+        
+        if (_treeWaveProgress >=0.01 || _treeWaveProgress <=-0.01) {
+            
+            [self.t1v.filter setValue:@(_treeWaveProgress) forKey:kCIInputAngleKey];
+            [self.t1v setNeedsDisplay];
+            [self.t2v.filter setValue:@(_treeWaveProgress) forKey:kCIInputAngleKey];
+            [self.t2v setNeedsDisplay];
+            [self.t3v.filter setValue:@(_treeWaveProgress) forKey:kCIInputAngleKey];
+            [self.t3v setNeedsDisplay];
+            [self.t4v.filter setValue:@(_treeWaveProgress) forKey:kCIInputAngleKey];
+            [self.t4v setNeedsDisplay];
+            [self.t5v.filter setValue:@(_treeWaveProgress) forKey:kCIInputAngleKey];
+            [self.t5v setNeedsDisplay];
+            
+        }
+    }
+    else {
+        [super observeValueForKeyPath:keyPath ofObject:object
+                               change:change context:context];
+    }
 }
 
 //Add Tree Image to FilterImageView & Add Filter
