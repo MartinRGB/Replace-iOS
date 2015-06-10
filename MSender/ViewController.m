@@ -224,7 +224,7 @@ static inline CGFloat POPTransition(CGFloat progress, CGFloat startValue, CGFloa
                 [self pop_removeAnimationForKey:@"treeWaveAnimation"];
             }
         };
-        animation.property = [POPAnimatableProperty propertyWithName:@"treeWaveAnimation" initializer:^(POPMutableAnimatableProperty *prop) {
+        animation.property = [POPAnimatableProperty propertyWithName:@"treeWaveProgress" initializer:^(POPMutableAnimatableProperty *prop) {
             prop.readBlock = ^(ViewController *obj, CGFloat values[]) {
                 values[0] = obj.treeWaveProgress;
             };
@@ -234,7 +234,7 @@ static inline CGFloat POPTransition(CGFloat progress, CGFloat startValue, CGFloa
             prop.threshold = 0.001;
         }];
         
-        [self pop_addAnimation:animation forKey:@"popAnimation"];
+        [self pop_addAnimation:animation forKey:@"treeWaveAnimation"];
     }
     animation.toValue =@(0.01);
 }
