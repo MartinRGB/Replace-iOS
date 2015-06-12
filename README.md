@@ -12,7 +12,7 @@ Special Thanks to my teacher [alienjun](https://github.com/alienjun),we discuss 
 
 I'm designer,my code skill is not well.What I can do is just do some fake prototype(without data).Welcome for suggest.
 
-![three principles]([https://d262ilb51hltx0.cloudfront.net/max/2000/1\*H0zG1GMJxettGHAMIjeHDg.png]?raw=true)
+![three principles](https://d262ilb51hltx0.cloudfront.net/max/2000/1\*H0zG1GMJxettGHAMIjeHDg.png?raw=true)
 ![Prototype](https://github.com/MartinRGB/Replace-iOS/blob/master/Asset/Parallax-QC.gif?raw=true)
 
 this is Origami Prototye 
