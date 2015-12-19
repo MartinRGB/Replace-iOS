@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4A9F4D85-98D7-4C29-AABA-9D64BD6FC83A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MSender</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>89CEB94BDA990481B5D9C3BE24805C3C2DBFAC42</key>
+		<string>https://github.com/MartinRGB/Replace-iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MSender.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>89CEB94BDA990481B5D9C3BE24805C3C2DBFAC42</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/MartinRGB/Replace-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>89CEB94BDA990481B5D9C3BE24805C3C2DBFAC42</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>89CEB94BDA990481B5D9C3BE24805C3C2DBFAC42</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Replace-iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
